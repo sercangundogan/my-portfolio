@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+section {
+  @apply flex items-center justify-center font-sans w-screen;
+}
+
+main {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(77, 154, 146);
+  /* outline: 1px solid slategrey; */
+  border-radius: 2px;
+}
