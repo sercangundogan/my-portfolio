@@ -12,7 +12,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Sercan Gündoğan - Frontend Developer & Tech Enthusiast',
+  title: 'Sercan Gündoğan - Frontend Developer',
   description:
     'Dive into the world of Sercan, a passionate Frontend Developer with a knack for continuous learning and innovation. Explore my journey from university projects to professional achievements with Sociality.io, and discover my expertise in HTML, CSS, JavaScript, React, and more. Join me in my quest for personal and professional growth, fueled by my love for software development, teamwork, and a diverse set of hobbies including swimming, basketball, and stock market analysis. Connect with me today to embark on new technological adventures.'
 }
