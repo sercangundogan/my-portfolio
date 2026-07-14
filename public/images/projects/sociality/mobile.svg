@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Sociality.io">
+  <rect width="1600" height="1000" fill="#EFEEE9"/>
+  <rect x="48" y="48" width="1504" height="904" fill="none" stroke="#CFCBC2" stroke-width="2"/>
+  <text x="80" y="120" font-family="ui-monospace, monospace" font-size="28" fill="#8A8A8A">PLACEHOLDER</text>
+  <text x="80" y="480" font-family="ui-sans-serif, system-ui, sans-serif" font-size="56" fill="#141414">Sociality.io</text>
+  <text x="80" y="560" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" fill="#5C5C5C">Mobile app screens</text>
+  <text x="80" y="900" font-family="ui-monospace, monospace" font-size="22" fill="#8A8A8A">Replace with final asset · 16:10</text>
+</svg>
