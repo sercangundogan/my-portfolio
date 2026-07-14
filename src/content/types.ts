@@ -4,7 +4,8 @@ export type OwnershipType =
   | "team"
   | "frontend"
   | "backend-deploy"
-  | "coding-lead";
+  | "coding-lead"
+  | "client";
 
 export type ProjectLink = {
   label: string;
@@ -15,7 +16,10 @@ export type ProjectLink = {
 export type ProjectImage = {
   src: string;
   alt: string;
-  placeholder: true;
+  width: number;
+  height: number;
+  /** Mark true only for temporary SVG/placeholder assets */
+  placeholder?: boolean;
   caption?: string;
 };
 
@@ -61,4 +65,5 @@ export const ownershipLabels: Record<OwnershipType, string> = {
   frontend: "Frontend contribution",
   "backend-deploy": "Backend and deployment contribution",
   "coding-lead": "Team project — coding ownership",
+  client: "One-time client project",
 };

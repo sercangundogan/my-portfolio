@@ -1,4 +1,4 @@
-import { projects } from "@/content/projects";
+import { getFeaturedProjects, projects } from "@/content/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { createMetadata } from "@/lib/seo";
@@ -6,12 +6,12 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Work",
   description:
-    "Selected projects by Hüseyin Sercan Gündoğan — Rewordly, Sociality.io, and more — with clear ownership and contribution labels.",
+    "Selected projects by Hüseyin Sercan Gündoğan — Sociality.io, Rewordly, and more — with clear ownership and contribution labels.",
   path: "/work",
 });
 
 export default function WorkPage() {
-  const featured = projects.filter((p) => p.featured);
+  const featured = getFeaturedProjects();
   const secondary = projects.filter((p) => !p.featured);
 
   return (

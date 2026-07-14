@@ -120,9 +120,13 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
           {project.images.length > 1 ? (
             <CaseStudySection title="Visuals">
-              <div className="grid gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {project.images.slice(1).map((image) => (
-                  <ProjectImageFrame key={image.src} image={image} />
+                  <ProjectImageFrame
+                    key={image.src}
+                    image={image}
+                    className="mx-0 max-w-none"
+                  />
                 ))}
               </div>
             </CaseStudySection>

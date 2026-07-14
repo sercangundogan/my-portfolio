@@ -21,12 +21,12 @@ export function Hero() {
         };
 
   return (
-    <section className="relative overflow-hidden border-b border-border">
+    <section className="border-border relative overflow-hidden border-b">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--accent-soft),transparent_55%)]" />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-16 lg:px-8 lg:py-28">
         <div>
           <motion.p
-            className="font-mono text-xs tracking-[0.16em] text-muted-2 uppercase"
+            className="text-muted-2 font-mono text-xs tracking-[0.16em] uppercase"
             {...fade(0)}
           >
             Frontend-focused Software Developer
@@ -40,16 +40,16 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+            className="text-muted mt-6 max-w-xl text-base leading-relaxed sm:text-lg"
             {...fade(0.1)}
           >
             I&apos;m {siteConfig.shortName}, a Software Developer with 4+ years of
-            experience building enterprise SaaS products with React, TypeScript, Next.js,
-            and React Native.
+            experience build enterprise SaaS products with React TypeScript, Next.js, and
+            React Native
           </motion.p>
 
           <motion.p
-            className="mt-4 max-w-xl text-base leading-relaxed text-muted"
+            className="text-muted mt-4 max-w-xl text-base leading-relaxed"
             {...fade(0.14)}
           >
             Currently working at Sociality.io and building independent products such as
@@ -59,7 +59,7 @@ export function Hero() {
           <motion.div className="mt-8 flex flex-wrap items-center gap-3" {...fade(0.18)}>
             <Link
               href="/work"
-              className="inline-flex items-center justify-center border border-foreground bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+              className="border-foreground bg-foreground text-background hover:bg-foreground/90 inline-flex items-center justify-center border px-4 py-2.5 text-sm font-medium transition-colors"
             >
               View selected work
             </Link>
@@ -67,7 +67,7 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted"
+            className="text-muted mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm"
             {...fade(0.22)}
           >
             <ExternalLink href={siteConfig.links.github} showIcon>
@@ -77,49 +77,46 @@ export function Hero() {
               LinkedIn
             </ExternalLink>
             <ExternalLink href={siteConfig.links.email}>Email</ExternalLink>
-            <span className="inline-flex items-center gap-2 text-muted">
-              <span
-                className="size-1.5 rounded-full bg-success"
-                aria-hidden="true"
-              />
+            <span className="text-muted inline-flex items-center gap-2">
+              <span className="bg-success size-1.5 rounded-full" aria-hidden="true" />
               <span className="text-sm">{siteConfig.availability.label}</span>
             </span>
           </motion.div>
         </div>
 
         <motion.aside
-          className="border border-border bg-surface/80 p-5 backdrop-blur-sm"
+          className="border-border bg-surface/80 border p-5 backdrop-blur-sm"
           aria-label="Selected projects index"
           {...fade(0.2)}
         >
-          <p className="font-mono text-[11px] tracking-[0.14em] text-muted-2 uppercase">
+          <p className="text-muted-2 font-mono text-[11px] tracking-[0.14em] uppercase">
             Selected index
           </p>
-          <ol className="mt-5 divide-y divide-border">
+          <ol className="divide-border mt-5 divide-y">
             {featured.map((project, index) => (
               <li key={project.slug}>
                 <Link
                   href={`/work/${project.slug}`}
-                  className="group flex items-baseline justify-between gap-4 py-4 transition-colors hover:text-accent"
+                  className="group hover:text-accent flex items-baseline justify-between gap-4 py-4 transition-colors"
                 >
                   <div>
-                    <span className="mr-3 font-mono text-xs text-muted-2">
+                    <span className="text-muted-2 mr-3 font-mono text-xs">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="tracking-tight">{project.name}</span>
-                    <p className="mt-1 pl-8 text-xs text-muted group-hover:text-muted">
+                    <p className="text-muted group-hover:text-muted mt-1 pl-8 text-xs">
                       {project.ownershipLabel}
                     </p>
                   </div>
-                  <span className="font-mono text-xs text-muted-2" aria-hidden="true">
+                  <span className="text-muted-2 font-mono text-xs" aria-hidden="true">
                     →
                   </span>
                 </Link>
               </li>
             ))}
           </ol>
-          <div className="mt-2 border-t border-border pt-4">
-            <p className="font-mono text-[11px] text-muted-2">
+          <div className="border-border mt-2 border-t pt-4">
+            <p className="text-muted-2 font-mono text-[11px]">
               Stack focus · React · TypeScript · Next.js · React Native
             </p>
           </div>
