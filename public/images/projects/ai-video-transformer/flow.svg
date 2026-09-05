@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="AI Video Transformer user flow">
+  <rect width="1600" height="900" fill="#09090b"/>
+  <text x="120" y="120" fill="#f97316" font-family="ui-monospace, Menlo, monospace" font-size="18" letter-spacing="3">USER FLOW</text>
+  <text x="120" y="190" fill="#fafafa" font-family="Georgia, serif" font-size="44">Upload → Transform → History</text>
+  <g font-family="system-ui, sans-serif">
+    <rect x="120" y="280" width="320" height="420" rx="16" fill="#18181b" stroke="#3f3f46"/>
+    <text x="150" y="340" fill="#f97316" font-size="16" font-weight="600">01 UPLOAD</text>
+    <text x="150" y="400" fill="#fafafa" font-size="24">MP4 / MOV</text>
+    <text x="150" y="450" fill="#a1a1aa" font-size="18">Browser → Uploadcare</text>
+    <text x="150" y="500" fill="#a1a1aa" font-size="18">Server verifies metadata</text>
+    <text x="150" y="550" fill="#a1a1aa" font-size="18">Cloudinary durable source</text>
+    <rect x="480" y="280" width="320" height="420" rx="16" fill="#18181b" stroke="#3f3f46"/>
+    <text x="510" y="340" fill="#f97316" font-size="16" font-weight="600">02 TRANSFORM</text>
+    <text x="510" y="400" fill="#fafafa" font-size="24">Style parameters</text>
+    <text x="510" y="450" fill="#a1a1aa" font-size="18">Magic Hour V2V job</text>
+    <text x="510" y="500" fill="#a1a1aa" font-size="18">Status: queued</text>
+    <text x="510" y="550" fill="#a1a1aa" font-size="18">Leave page safely</text>
+    <rect x="840" y="280" width="320" height="420" rx="16" fill="#18181b" stroke="#3f3f46"/>
+    <text x="870" y="340" fill="#f97316" font-size="16" font-weight="600">03 WEBHOOK</text>
+    <text x="870" y="400" fill="#fafafa" font-size="24">Async lifecycle</text>
+    <text x="870" y="450" fill="#a1a1aa" font-size="18">started → processing</text>
+    <text x="870" y="500" fill="#a1a1aa" font-size="18">completed → Cloudinary</text>
+    <text x="870" y="550" fill="#a1a1aa" font-size="18">HMAC + idempotent IDs</text>
+    <rect x="1200" y="280" width="280" height="420" rx="16" fill="#18181b" stroke="#3f3f46"/>
+    <text x="1230" y="340" fill="#f97316" font-size="16" font-weight="600">04 HISTORY</text>
+    <text x="1230" y="400" fill="#fafafa" font-size="24">Poll while active</text>
+    <text x="1230" y="450" fill="#a1a1aa" font-size="18">~3s adaptive</text>
+    <text x="1230" y="500" fill="#a1a1aa" font-size="18">Stop when idle</text>
+    <text x="1230" y="550" fill="#a1a1aa" font-size="18">Source + output URLs</text>
+  </g>
+</svg>

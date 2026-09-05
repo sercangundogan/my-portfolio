@@ -27,20 +27,20 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    company: "İncir Ar-Ge",
-    role: "Project Intern",
+    company: "Eleport Cloud Services",
+    role: "Software Engineer Intern",
     start: "July 2021",
     end: "August 2021",
     description:
-      "Contributed to frontend and backend development of a decision support system built with Python and Django.",
+      "Contributed to the development of an enterprise software project built with React and Django REST Framework.",
   },
   {
-    company: "Gravit",
+    company: "İncir R&D",
     role: "Software Engineer Intern",
     start: "May 2021",
     end: "July 2021",
     description:
-      "Contributed to an enterprise software project built with React and Django REST Framework.",
+      "Contributed to frontend and backend development of a decision support system built with Python and Django.",
   },
 ];
 

@@ -261,7 +261,7 @@ export const projects: Project[] = [
       },
     ],
     featured: true,
-    featuredOrder: 5,
+    featuredOrder: 6,
     images: [
       {
         src: "/images/projects/seoneer/overview.svg",
@@ -357,7 +357,7 @@ export const projects: Project[] = [
       },
     ],
     featured: true,
-    featuredOrder: 6,
+    featuredOrder: 7,
     images: [
       {
         src: "/images/projects/livoic/overview.svg",
@@ -409,6 +409,107 @@ export const projects: Project[] = [
       outcome: [
         "A working independent realtime translation stack for Twitch with game-aware terminology and local mock providers.",
         "Demonstrates extension + websocket backend ownership beyond a UI-only Chrome project.",
+      ],
+    },
+  },
+  {
+    slug: "ai-video-transformer",
+    name: "AI Video Transformer",
+    shortDescription:
+      "A full-stack AI video-to-video app: upload a clip, choose Magic Hour style parameters, and browse async history until the generated video is ready.",
+    category: "Full-stack AI App",
+    role: "Creator and Full-stack Developer",
+    ownership: "end-to-end",
+    ownershipLabel: "End-to-end ownership",
+    timeline: "2026",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "MongoDB",
+      "Uploadcare",
+      "Cloudinary",
+      "Magic Hour API",
+      "TanStack Query",
+      "Zod",
+      "Vercel",
+      "Tailwind CSS",
+    ],
+    contributions: [
+      "Built the Next.js App Router app end to end — upload, transform, webhook, and history flows",
+      "Integrated Uploadcare direct browser uploads with server-side metadata verification",
+      "Stored durable source and generated videos in Cloudinary via remote-fetch (no video proxying through Vercel)",
+      "Created Magic Hour Video-to-Video jobs and handled async lifecycle via signed webhooks",
+      "Modeled transformation state in MongoDB as the source of truth across UI and providers",
+      "Shipped adaptive TanStack Query polling for queued/processing jobs without WebSockets",
+      "Added HMAC webhook verification, idempotent completion, and focused unit tests",
+      "Deployed a live demo on Vercel with production webhook configuration",
+    ],
+    links: [
+      {
+        label: "Live demo",
+        href: "https://ai-video-transformer-one.vercel.app",
+        external: true,
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/sercangundogan/ai-video-transformer",
+        external: true,
+      },
+    ],
+    featured: true,
+    featuredOrder: 8,
+    images: [
+      {
+        src: "/images/projects/ai-video-transformer/overview.svg",
+        alt: "AI Video Transformer architecture overview with Uploadcare, Cloudinary, Magic Hour, and MongoDB",
+        width: 1600,
+        height: 900,
+        caption: "Architecture overview",
+        placeholder: true,
+      },
+      {
+        src: "/images/projects/ai-video-transformer/flow.svg",
+        alt: "AI Video Transformer user flow — upload, transform, webhook, history",
+        width: 1600,
+        height: 900,
+        caption: "User flow",
+        placeholder: true,
+      },
+    ],
+    caseStudy: {
+      overview:
+        "AI Video Transformer is a full-stack Next.js application for Magic Hour video-to-video transformations. Users upload a source clip, submit style parameters, and follow async job status in a history view until a durable generated video is available.",
+      context:
+        "I built this as a solo full-stack project to demonstrate upload pipelines, third-party AI APIs, webhook-driven async work, and durable media storage on a serverless Next.js/Vercel stack.",
+      roleDetail:
+        "I owned architecture, API routes, provider integrations, UI, validation, tests, documentation, and deployment as creator and full-stack developer.",
+      ownershipDetail:
+        "End-to-end ownership of the application: Uploadcare → Cloudinary → Magic Hour → MongoDB → Vercel webhook surface, plus the React history/polling UX.",
+      problem:
+        "Video-to-video renders take minutes and provider download URLs expire. Large binaries should not transit through serverless functions, and the browser must not be the source of truth for job state.",
+      contribution: [
+        "Designed a UUID-only upload registration path that verifies Uploadcare metadata server-side before Cloudinary remote-fetch.",
+        "Implemented transform + webhook APIs with trusted transformation IDs (clients cannot override asset URLs).",
+        "Copied completed Magic Hour outputs into Cloudinary with deterministic public IDs for idempotent webhook handling.",
+        "Built adaptive history polling that runs only while jobs are queued or processing.",
+        "Documented architecture, env setup, and live webhook configuration; shipped a public Vercel demo.",
+      ],
+      technicalDecisions: [
+        "Browser → Uploadcare for uploads; Next.js never proxies large video bodies.",
+        "MongoDB as lifecycle source of truth shared by UI polling and webhook updates.",
+        "Dashboard-registered Magic Hour webhooks (current provider API) with HMAC-SHA256 verification.",
+        "TanStack Query adaptive polling instead of WebSockets/SSE for this scope.",
+      ],
+      challenges: [
+        "Aligning with Magic Hour’s current webhook model versus older callback-URL assignment text.",
+        "Keeping upload/webhook paths within serverless duration limits for large media.",
+        "Preventing duplicate transform jobs with atomic claim / reclaim logic.",
+        "Securing webhooks (signature + timestamp skew) while remaining idempotent on retries.",
+      ],
+      outcome: [
+        "A live demo at ai-video-transformer-one.vercel.app covering upload → transform → webhook → history.",
+        "Clear evidence of full-stack ownership across media upload, AI providers, async webhooks, and serverless deployment.",
       ],
     },
   },
@@ -587,6 +688,116 @@ export const projects: Project[] = [
       ],
       confidentialityNote:
         "Internal dashboards may contain operational data. Until approved screenshots are provided, visuals use clearly labeled placeholders. Proprietary implementation details are omitted.",
+    },
+  },
+  {
+    slug: "elecore",
+    name: "Elecore",
+    shortDescription:
+      "An elevator configurator for engineering teams — standards-aware shaft and cabin layouts, interactive editors, PDF reports, and a shared account across web and mobile.",
+    category: "Engineering SaaS / Configurator",
+    role: "Software Developer — backend, frontend, and mobile",
+    ownership: "team",
+    ownershipLabel: "Backend, frontend, and mobile contribution",
+    timeline: "May 2026 – Present",
+    technologies: [
+      "Django",
+      "Django REST Framework",
+      "Python",
+      "PostgreSQL",
+      "React",
+      "Vite",
+      "Expo",
+      "React Native",
+      "JWT Auth",
+      "Docker",
+      "Nginx",
+      "Gunicorn",
+      "i18next",
+      "WebAssembly",
+    ],
+    contributions: [
+      "Contributes across backend API, React web app, and Expo mobile app on an existing product codebase",
+      "Builds and improves elevator configuration, group layout, and SVG/PDF reporting flows",
+      "Implements auth improvements (email/username login, password reset, mobile access hints)",
+      "Adds admin analytics, activity logging, and user/company management features",
+      "Ships and iterates the iOS/Android Expo app (orientation, WebView flows, store releases)",
+      "Extends localization across many languages for web and report surfaces",
+      "Works on Docker/Nginx deployment and production HTTPS configuration",
+    ],
+    links: [
+      { label: "Website", href: "https://elecore.io", external: true },
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/elecore/id6768652504",
+        external: true,
+      },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.eleport.elecore",
+        external: true,
+      },
+    ],
+    featured: true,
+    featuredOrder: 5,
+    images: [
+      {
+        src: "/images/projects/elecore/overview.svg",
+        alt: "Elecore product overview — web, API, and mobile elevator configurator",
+        width: 1600,
+        height: 900,
+        caption: "Product overview",
+        placeholder: true,
+      },
+      {
+        src: "/images/projects/elecore/logo.png",
+        alt: "Elecore brand logo",
+        width: 670,
+        height: 901,
+        caption: "Brand mark",
+      },
+      {
+        src: "/images/projects/elecore/app-icon.png",
+        alt: "Elecore mobile app icon",
+        width: 670,
+        height: 670,
+        caption: "Mobile app icon",
+      },
+    ],
+    caseStudy: {
+      overview:
+        "Elecore is a production elevator configuration product at elecore.io (with iOS and Android apps). The project existed before I joined; I contribute across backend, frontend, and mobile rather than owning the product end to end.",
+      context:
+        "Elevator manufacturers and engineers need standards-compliant shaft/cabin layouts (EN 81-20, ISO 8100-30, ISO 4190-2), interactive editors, and shareable PDF documentation — available on desktop and mobile with one account.",
+      roleDetail:
+        "As a contributing software developer I ship features and fixes across the Django API, React/Vite web app, and Expo React Native mobile app.",
+      ownershipDetail:
+        "Team contribution on a pre-existing codebase. Product direction and earlier foundations sit with the original team; my scope spans API endpoints, web UX, mobile release work, auth, analytics, localization, and deployment support — not sole founder ownership.",
+      problem:
+        "Configuration logic, drawings, and reports must stay consistent across web and mobile while the product evolves. Contributors need to extend backend rules, interactive editors, and store-ready mobile surfaces without breaking standards-driven workflows.",
+      contribution: [
+        "Delivered backend work including elevator group/layout APIs, auth backends, activity metrics, and admin analytics endpoints.",
+        "Improved web configurator UX: GroupEditor/PDF flows, localization, homepage/auth polish, and mobile-access messaging.",
+        "Built and released Expo mobile experiences (tablet orientation, WebView screens, splash/versioning, store builds).",
+        "Supported production ops concerns such as HTTPS proxy headers and Docker/Nginx-oriented deployment.",
+      ],
+      technicalDecisions: [
+        "Django REST Framework as the shared API for web and mobile clients.",
+        "React + Vite for the interactive web configurator (SVG, zoom/pan, PDF export).",
+        "Expo Router for the native apps with shared account against elecore.io.",
+        "Docker Compose + Gunicorn/Nginx for deployable multi-service runtime.",
+      ],
+      challenges: [
+        "Working productively inside an established domain-heavy codebase (elevator standards and layout math).",
+        "Keeping web and mobile behavior aligned for auth and configuration flows.",
+        "Shipping store-ready mobile releases alongside ongoing API/web feature work.",
+      ],
+      outcome: [
+        "Ongoing full-stack contribution to a live product used on web, App Store, and Google Play.",
+        "Demonstrates backend + frontend + mobile delivery as a team contributor — not end-to-end product ownership.",
+      ],
+      confidentialityNote:
+        "Internal engineering screens and proprietary configuration logic are omitted. Visuals use public brand assets and a labeled overview placeholder.",
     },
   },
   {

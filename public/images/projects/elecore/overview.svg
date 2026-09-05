@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="eleCore elevator configurator overview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1340"/>
+      <stop offset="100%" stop-color="#2C226D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="120" y="150" fill="#c4b5fd" font-family="ui-monospace, Menlo, monospace" font-size="20" letter-spacing="4">ELECORE</text>
+  <text x="120" y="230" fill="#f8fafc" font-family="Georgia, serif" font-size="52">Elevator configurator</text>
+  <text x="120" y="295" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="24">Standards-aware shaft and cabin layout for engineering teams</text>
+  <g font-family="system-ui, sans-serif">
+    <rect x="120" y="380" width="420" height="160" rx="14" fill="#241a55" stroke="#5b4a9e"/>
+    <text x="150" y="440" fill="#ddd6fe" font-size="16" font-weight="600">WEB</text>
+    <text x="150" y="485" fill="#f8fafc" font-size="22">React + Vite configurator</text>
+    <rect x="580" y="380" width="420" height="160" rx="14" fill="#241a55" stroke="#5b4a9e"/>
+    <text x="610" y="440" fill="#ddd6fe" font-size="16" font-weight="600">API</text>
+    <text x="610" y="485" fill="#f8fafc" font-size="22">Django REST + SVG/placement</text>
+    <rect x="1040" y="380" width="420" height="160" rx="14" fill="#241a55" stroke="#5b4a9e"/>
+    <text x="1070" y="440" fill="#ddd6fe" font-size="16" font-weight="600">MOBILE</text>
+    <text x="1070" y="485" fill="#f8fafc" font-size="22">Expo iOS &amp; Android</text>
+  </g>
+  <text x="120" y="640" fill="#e9e5ff" font-family="system-ui, sans-serif" font-size="22">EN 81-20 · ISO 8100-30 · ISO 4190-2 · interactive editors · PDF reports</text>
+  <text x="120" y="700" fill="#a78bfa" font-family="ui-monospace, Menlo, monospace" font-size="18">elecore.io · App Store · Google Play</text>
+</svg>
