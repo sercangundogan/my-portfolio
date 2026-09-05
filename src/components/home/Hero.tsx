@@ -53,7 +53,7 @@ export function Hero() {
             {...fade(0.14)}
           >
             Currently working at Sociality.io and building independent products such as
-            Rewordly.
+            Rewordly, Seoneer, and Livoic.
           </motion.p>
 
           <motion.div className="mt-8 flex flex-wrap items-center gap-3" {...fade(0.18)}>

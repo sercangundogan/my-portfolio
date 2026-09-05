@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Work",
   description:
-    "Selected projects by Hüseyin Sercan Gündoğan — Sociality.io, Rewordly, and more — with clear ownership and contribution labels.",
+    "Selected projects by Hüseyin Sercan Gündoğan — Sociality.io, Rewordly, Seoneer, Livoic, and more — with clear ownership and contribution labels.",
   path: "/work",
 });
 

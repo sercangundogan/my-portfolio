@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Seoneer operations dashboard">
+  <rect width="1600" height="900" fill="#f7f6f3"/>
+  <rect x="0" y="0" width="260" height="900" fill="#efece6"/>
+  <text x="36" y="60" fill="#1c1917" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Seoneer</text>
+  <text x="36" y="130" fill="#0f6b5c" font-family="system-ui, sans-serif" font-size="16">Overview</text>
+  <text x="36" y="175" fill="#78716c" font-family="system-ui, sans-serif" font-size="16">Projects</text>
+  <text x="36" y="220" fill="#78716c" font-family="system-ui, sans-serif" font-size="16">Activity</text>
+  <text x="36" y="265" fill="#78716c" font-family="system-ui, sans-serif" font-size="16">Billing</text>
+  <text x="300" y="70" fill="#1c1917" font-family="Georgia, serif" font-size="36">Operations</text>
+  <text x="300" y="115" fill="#78716c" font-family="system-ui, sans-serif" font-size="18">Highest-value safe action for this cycle</text>
+  <rect x="300" y="160" width="1180" height="200" rx="14" fill="#ffffff" stroke="#e7e5e4"/>
+  <text x="340" y="220" fill="#0f6b5c" font-family="system-ui, sans-serif" font-size="16" font-weight="600">SELECTED ACTION</text>
+  <text x="340" y="270" fill="#1c1917" font-family="system-ui, sans-serif" font-size="28" font-weight="600">IMPROVE_TITLE_DESCRIPTION</text>
+  <text x="340" y="320" fill="#57534e" font-family="system-ui, sans-serif" font-size="18">Why: low CTR on high-impression product pages · confidence high</text>
+  <rect x="300" y="400" width="560" height="380" rx="14" fill="#ffffff" stroke="#e7e5e4"/>
+  <text x="340" y="460" fill="#1c1917" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Pipeline</text>
+  <text x="340" y="520" fill="#57534e" font-family="system-ui, sans-serif" font-size="18">Research · Brief · Code agent · Reviewer</text>
+  <text x="340" y="570" fill="#0f6b5c" font-family="system-ui, sans-serif" font-size="18">PR opened · awaiting approval</text>
+  <text x="340" y="630" fill="#a8a29e" font-family="ui-monospace, Menlo, monospace" font-size="15">branch: seoneer/seo-titles-2026-08</text>
+  <rect x="900" y="400" width="580" height="380" rx="14" fill="#ffffff" stroke="#e7e5e4"/>
+  <text x="940" y="460" fill="#1c1917" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Impact signals</text>
+  <text x="940" y="530" fill="#57534e" font-family="system-ui, sans-serif" font-size="18">GSC clicks · impressions · position</text>
+  <text x="940" y="590" fill="#57534e" font-family="system-ui, sans-serif" font-size="18">Action acceptance · no-action integrity</text>
+  <text x="940" y="650" fill="#a8a29e" font-family="system-ui, sans-serif" font-size="16">Credits reserved · quality gates passed</text>
+</svg>
