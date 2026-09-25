@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "About",
   description:
-    "About Hüseyin Sercan Gündoğan — frontend-focused Software Developer with 4+ years building web and mobile products.",
+    "About Hüseyin Sercan Gündoğan — frontend-focused Software Developer with 5+ years building web and mobile products.",
   path: "/about",
 });
 

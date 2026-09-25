@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Seoneer product overview">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f6f3"/>
+      <stop offset="100%" stop-color="#efece6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+  <circle cx="1280" cy="120" r="280" fill="#0f6b5c" fill-opacity="0.08"/>
+  <text x="120" y="160" fill="#0f6b5c" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Seoneer</text>
+  <text x="120" y="250" fill="#1c1917" font-family="Georgia, serif" font-size="54">Autonomous SEO engineer</text>
+  <text x="120" y="320" fill="#57534e" font-family="system-ui, sans-serif" font-size="28">for GitHub-hosted Next.js software projects</text>
+  <text x="120" y="390" fill="#78716c" font-family="system-ui, sans-serif" font-size="22">Understands the product and codebase, picks one high-value action, ships a PR.</text>
+  <g font-family="system-ui, sans-serif">
+    <rect x="120" y="470" width="320" height="160" rx="12" fill="#ffffff" stroke="#e7e5e4"/>
+    <text x="150" y="530" fill="#0f6b5c" font-size="18" font-weight="600">01 Connect</text>
+    <text x="150" y="570" fill="#44403c" font-size="20">GitHub App + GSC</text>
+    <rect x="470" y="470" width="320" height="160" rx="12" fill="#ffffff" stroke="#e7e5e4"/>
+    <text x="500" y="530" fill="#0f6b5c" font-size="18" font-weight="600">02 Understand</text>
+    <text x="500" y="570" fill="#44403c" font-size="20">Repo intelligence</text>
+    <rect x="820" y="470" width="320" height="160" rx="12" fill="#ffffff" stroke="#e7e5e4"/>
+    <text x="850" y="530" fill="#0f6b5c" font-size="18" font-weight="600">03 Act</text>
+    <text x="850" y="570" fill="#44403c" font-size="20">One safe SEO action</text>
+    <rect x="1170" y="470" width="320" height="160" rx="12" fill="#ffffff" stroke="#e7e5e4"/>
+    <text x="1200" y="530" fill="#0f6b5c" font-size="18" font-weight="600">04 Review</text>
+    <text x="1200" y="570" fill="#44403c" font-size="20">Pull request delivery</text>
+  </g>
+  <text x="120" y="720" fill="#a8a29e" font-family="ui-monospace, Menlo, monospace" font-size="16">Next.js · Trigger.dev · Drizzle · Better Auth · Dodo · Vercel AI SDK</text>
+  <text x="120" y="770" fill="#a8a29e" font-family="ui-monospace, Menlo, monospace" font-size="16">seoneer.site</text>
+</svg>

@@ -218,6 +218,303 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "seoneer",
+    name: "Seoneer",
+    shortDescription:
+      "An autonomous SEO engineer for GitHub-hosted Next.js projects — it understands the product and codebase, picks one high-value safe action, and ships it as a pull request.",
+    category: "Independent Product / SEO SaaS",
+    role: "Creator and Full-stack Product Developer",
+    ownership: "end-to-end",
+    ownershipLabel: "End-to-end ownership",
+    timeline: "2026 – Present",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Better Auth",
+      "Trigger.dev",
+      "Vercel AI SDK",
+      "GitHub App",
+      "Google Search Console",
+      "Dodo Payments",
+      "Resend",
+      "Zod",
+      "Tailwind CSS",
+    ],
+    contributions: [
+      "Designed and built the product end to end as a modular Next.js monolith",
+      "Implemented GitHub App install, repository analysis, and PR delivery flows",
+      "Built Project Intelligence profiles and SEO action selection agents",
+      "Integrated Google Search Console for performance-driven prioritization",
+      "Orchestrated long-running AI/analysis work with Trigger.dev background jobs",
+      "Added Better Auth (GitHub OAuth), workspaces, billing credits, and approvals",
+      "Shipped people-first SEO principles: prefer fix/link/update over content volume",
+      "Built marketing site, onboarding, and calm operations dashboard",
+    ],
+    links: [
+      { label: "Website", href: "https://seoneer.site", external: true },
+      {
+        label: "GitHub",
+        href: "https://github.com/sercangundogan/seoneer",
+        external: true,
+      },
+    ],
+    featured: true,
+    featuredOrder: 6,
+    images: [
+      {
+        src: "/images/projects/seoneer/overview.svg",
+        alt: "Seoneer product overview — autonomous SEO engineer for GitHub repos",
+        width: 1600,
+        height: 900,
+        caption: "Product overview",
+        placeholder: true,
+      },
+      {
+        src: "/images/projects/seoneer/dashboard.svg",
+        alt: "Seoneer operations dashboard with selected SEO action and pipeline",
+        width: 1600,
+        height: 900,
+        caption: "Operations dashboard",
+        placeholder: true,
+      },
+    ],
+    caseStudy: {
+      overview:
+        "Seoneer is an independent SaaS product that acts as an autonomous SEO engineer for software projects. It connects to a GitHub repository, builds product intelligence from the codebase, and executes the highest-value safe SEO action as a reviewable pull request — not a content farm.",
+      context:
+        "I built Seoneer as a solo product to solve recurring SEO work for technical founders who already ship on GitHub and Next.js, but lack time for sustainable organic growth.",
+      roleDetail:
+        "I own product direction, architecture, implementation, agent contracts, billing, and iteration as creator and full-stack product developer.",
+      ownershipDetail:
+        "End-to-end ownership of the modular monolith: auth, GitHub App integration, repo analysis, SEO agents, Trigger.dev jobs, Search Console, payments, notifications, and the operations UI.",
+      problem:
+        "Traditional SEO tools produce dashboards and recommendations. Generic AI content tools produce low-trust articles. Founders need shippable, reversible repository changes grounded in product context — with human review by default.",
+      contribution: [
+        "Designed a people-first action catalog (titles, links, technical SEO, articles) with explicit NO_ACTION / WAIT stop conditions.",
+        "Built repository analysis and versioned Project Intelligence Profiles from Next.js App Router codebases.",
+        "Orchestrated multi-stage agents (analyst, strategist, researcher, writer, code agent, reviewer) via Trigger.dev.",
+        "Delivered every normal change as a GitHub PR with quality gates — never writing to the default branch by default.",
+        "Integrated GSC signals, Dodo credit billing, Better Auth, and Resend approval notifications.",
+      ],
+      technicalDecisions: [
+        "Modular monolith on Next.js App Router rather than premature microservices.",
+        "Domain logic in feature modules; long AI/crawl/build work only in Trigger.dev tasks.",
+        "Structured Zod-validated agent I/O over a provider-agnostic Vercel AI SDK facade.",
+        "Drizzle + PostgreSQL as source of truth; GitHub App for safe repo mutations.",
+      ],
+      challenges: [
+        "Keeping autonomous SEO safe: path policies, human review, and explainable decisions.",
+        "Selecting one highest-value action per cycle without incentivizing content spam.",
+        "Running expensive analysis outside HTTP request lifetimes.",
+        "Grounding AI output in real product evidence instead of fabricated claims.",
+      ],
+      outcome: [
+        "A shipping independent SEO operations product at seoneer.site with PR-first delivery.",
+        "Demonstrates end-to-end ownership of AI agents, GitHub automation, billing, and product UX.",
+      ],
+    },
+  },
+  {
+    slug: "livoic",
+    name: "Livoic",
+    shortDescription:
+      "A Chrome extension and realtime backend that captures live Twitch audio, transcribes and translates speech, and renders Netflix-style subtitles over the player.",
+    category: "Independent Product / Chrome Extension",
+    role: "Creator and Developer",
+    ownership: "end-to-end",
+    ownershipLabel: "End-to-end ownership",
+    timeline: "2026 – Present",
+    technologies: [
+      "TypeScript",
+      "Chrome Extension APIs",
+      "Vite",
+      "React",
+      "Fastify",
+      "WebSockets",
+      "Zod",
+      "Deepgram",
+      "OpenAI",
+      "pnpm workspaces",
+      "Docker",
+    ],
+    contributions: [
+      "Designed and built the monorepo from scratch (extension, server, shared protocol packages)",
+      "Implemented Manifest V3 tab-audio capture via offscreen PCM pipeline",
+      "Built Fastify WebSocket gateway with short-lived realtime auth tokens",
+      "Added provider-agnostic speech and translation adapters (mock, Deepgram, OpenAI)",
+      "Built Shadow DOM subtitle overlay for Twitch theater and fullscreen modes",
+      "Implemented game-aware translation profiles and terminology preservation",
+      "Added transcript correction, topic-aware routing, and sentence assembly pipelines",
+      "Owned product UX, architecture, testing, and iteration end to end",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/sercangundogan/livoic",
+        external: true,
+      },
+    ],
+    featured: true,
+    featuredOrder: 7,
+    images: [
+      {
+        src: "/images/projects/livoic/overview.svg",
+        alt: "Livoic architecture overview — capture, speech, translate, overlay",
+        width: 1600,
+        height: 900,
+        caption: "System overview",
+        placeholder: true,
+      },
+      {
+        src: "/images/projects/livoic/extension.svg",
+        alt: "Livoic Chrome extension popup with language selector and live session",
+        width: 640,
+        height: 900,
+        caption: "Extension popup",
+        placeholder: true,
+      },
+    ],
+    caseStudy: {
+      overview:
+        "Livoic (Live Translator) is an independent product: a Chrome Manifest V3 extension plus a Fastify realtime backend that turns live Twitch audio into translated player subtitles while preserving the original stream audio.",
+      context:
+        "I built Livoic solo to explore realtime media pipelines, extension architecture, and game-aware machine translation for live streaming — without microphone access or provider secrets in the extension.",
+      roleDetail:
+        "I own product direction, extension UX, realtime protocol, speech/translation providers, and iteration as creator and developer.",
+      ownershipDetail:
+        "End-to-end ownership across the pnpm monorepo: extension (popup, service worker, offscreen, overlay), Fastify WS server, shared protocol/schemas, game profiles, and correction/routing pipelines.",
+      problem:
+        "Viewers who do not speak a streamer’s language miss live context. Generic translators ignore gaming terminology, and naive subtitle UX flashes unfinished English fragments over the player.",
+      contribution: [
+        "Shipped tab-only audio capture → PCM streaming → STT → translation → overlay pipeline.",
+        "Designed typed client/server events with Zod and short-lived HMAC realtime tokens.",
+        "Added game detection from Twitch category metadata and terminology profiles (e.g. Path of Exile).",
+        "Built low-confidence transcript correction with an audio ring buffer and selective re-transcription.",
+        "Added topic-aware routing and sentence assembly so incomplete STT fragments merge into natural subtitle lines.",
+      ],
+      technicalDecisions: [
+        "pnpm workspace monorepo with shared protocol and UI packages.",
+        "Provider interfaces so mock STT/MT work locally and Deepgram/OpenAI plug in for production.",
+        "Shadow DOM overlay isolation to survive Twitch player CSS and fullscreen modes.",
+        "No API keys in the extension — secrets stay on the Fastify backend.",
+      ],
+      challenges: [
+        "Reliable Chrome tab capture and offscreen audio without capturing the microphone.",
+        "Avoiding partial-transcript “English flash” in the subtitle overlay.",
+        "Preserving official skill/item names while producing natural target-language speech.",
+        "Keeping correction and routing latency acceptable for live viewing.",
+      ],
+      outcome: [
+        "A working independent realtime translation stack for Twitch with game-aware terminology and local mock providers.",
+        "Demonstrates extension + websocket backend ownership beyond a UI-only Chrome project.",
+      ],
+    },
+  },
+  {
+    slug: "ai-video-transformer",
+    name: "AI Video Transformer",
+    shortDescription:
+      "A full-stack AI video-to-video app: upload a clip, choose Magic Hour style parameters, and browse async history until the generated video is ready.",
+    category: "Full-stack AI App",
+    role: "Creator and Full-stack Developer",
+    ownership: "end-to-end",
+    ownershipLabel: "End-to-end ownership",
+    timeline: "2026",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "MongoDB",
+      "Uploadcare",
+      "Cloudinary",
+      "Magic Hour API",
+      "TanStack Query",
+      "Zod",
+      "Vercel",
+      "Tailwind CSS",
+    ],
+    contributions: [
+      "Built the Next.js App Router app end to end — upload, transform, webhook, and history flows",
+      "Integrated Uploadcare direct browser uploads with server-side metadata verification",
+      "Stored durable source and generated videos in Cloudinary via remote-fetch (no video proxying through Vercel)",
+      "Created Magic Hour Video-to-Video jobs and handled async lifecycle via signed webhooks",
+      "Modeled transformation state in MongoDB as the source of truth across UI and providers",
+      "Shipped adaptive TanStack Query polling for queued/processing jobs without WebSockets",
+      "Added HMAC webhook verification, idempotent completion, and focused unit tests",
+      "Deployed a live demo on Vercel with production webhook configuration",
+    ],
+    links: [
+      {
+        label: "Live demo",
+        href: "https://ai-video-transformer-one.vercel.app",
+        external: true,
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/sercangundogan/ai-video-transformer",
+        external: true,
+      },
+    ],
+    featured: true,
+    featuredOrder: 8,
+    images: [
+      {
+        src: "/images/projects/ai-video-transformer/overview.svg",
+        alt: "AI Video Transformer architecture overview with Uploadcare, Cloudinary, Magic Hour, and MongoDB",
+        width: 1600,
+        height: 900,
+        caption: "Architecture overview",
+        placeholder: true,
+      },
+      {
+        src: "/images/projects/ai-video-transformer/flow.svg",
+        alt: "AI Video Transformer user flow — upload, transform, webhook, history",
+        width: 1600,
+        height: 900,
+        caption: "User flow",
+        placeholder: true,
+      },
+    ],
+    caseStudy: {
+      overview:
+        "AI Video Transformer is a full-stack Next.js application for Magic Hour video-to-video transformations. Users upload a source clip, submit style parameters, and follow async job status in a history view until a durable generated video is available.",
+      context:
+        "I built this as a solo full-stack project to demonstrate upload pipelines, third-party AI APIs, webhook-driven async work, and durable media storage on a serverless Next.js/Vercel stack.",
+      roleDetail:
+        "I owned architecture, API routes, provider integrations, UI, validation, tests, documentation, and deployment as creator and full-stack developer.",
+      ownershipDetail:
+        "End-to-end ownership of the application: Uploadcare → Cloudinary → Magic Hour → MongoDB → Vercel webhook surface, plus the React history/polling UX.",
+      problem:
+        "Video-to-video renders take minutes and provider download URLs expire. Large binaries should not transit through serverless functions, and the browser must not be the source of truth for job state.",
+      contribution: [
+        "Designed a UUID-only upload registration path that verifies Uploadcare metadata server-side before Cloudinary remote-fetch.",
+        "Implemented transform + webhook APIs with trusted transformation IDs (clients cannot override asset URLs).",
+        "Copied completed Magic Hour outputs into Cloudinary with deterministic public IDs for idempotent webhook handling.",
+        "Built adaptive history polling that runs only while jobs are queued or processing.",
+        "Documented architecture, env setup, and live webhook configuration; shipped a public Vercel demo.",
+      ],
+      technicalDecisions: [
+        "Browser → Uploadcare for uploads; Next.js never proxies large video bodies.",
+        "MongoDB as lifecycle source of truth shared by UI polling and webhook updates.",
+        "Dashboard-registered Magic Hour webhooks (current provider API) with HMAC-SHA256 verification.",
+        "TanStack Query adaptive polling instead of WebSockets/SSE for this scope.",
+      ],
+      challenges: [
+        "Aligning with Magic Hour’s current webhook model versus older callback-URL assignment text.",
+        "Keeping upload/webhook paths within serverless duration limits for large media.",
+        "Preventing duplicate transform jobs with atomic claim / reclaim logic.",
+        "Securing webhooks (signature + timestamp skew) while remaining idempotent on retries.",
+      ],
+      outcome: [
+        "A live demo at ai-video-transformer-one.vercel.app covering upload → transform → webhook → history.",
+        "Clear evidence of full-stack ownership across media upload, AI providers, async webhooks, and serverless deployment.",
+      ],
+    },
+  },
+  {
     slug: "sociality",
     name: "Sociality.io",
     shortDescription:

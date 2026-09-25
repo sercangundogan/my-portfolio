@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "Sercan",
   title: "Hüseyin Sercan Gündoğan — Frontend-focused Software Developer",
   description:
-    "Frontend-focused Software Developer with 4+ years of experience building scalable web and mobile products with React, TypeScript, Next.js, and React Native.",
+    "Frontend-focused Software Developer with 5+ years of experience building scalable web and mobile products with React, TypeScript, Next.js, and React Native.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sercangundogan.com",
   locale: "en_US",
   location: "Izmir, Turkey",

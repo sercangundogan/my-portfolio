@@ -44,7 +44,7 @@ export function Hero() {
             className="text-muted mt-6 max-w-xl text-base leading-relaxed sm:text-lg"
             {...fade(0.1)}
           >
-            I&apos;m {siteConfig.shortName}, a Software Developer with 4+ years of
+            I&apos;m {siteConfig.shortName}, a Software Developer with 5+ years of
             experience build enterprise SaaS products with React TypeScript, Next.js, and
             React Native
           </motion.p>
