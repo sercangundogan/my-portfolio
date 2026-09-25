@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { about } from "@/content/experience";
+import { about, featuredAchievements } from "@/content/experience";
 import { skillGroups } from "@/content/skills";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
@@ -25,27 +25,53 @@ export function AboutPreview() {
           </Link>
         </Reveal>
 
-        <Reveal delay={0.08}>
-          <p className="font-mono text-xs tracking-[0.14em] text-muted-2 uppercase">
-            Primary stack
-          </p>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {primary?.items.map((item) => (
-              <li
-                key={item}
-                className="border border-border px-2.5 py-1.5 font-mono text-xs tracking-wide text-muted"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-sm text-muted">
-            Skills are grouped by relevance on the{" "}
-            <Link href="/about" className="underline-offset-4 hover:underline">
-              about page
+        <Reveal delay={0.08} className="space-y-10">
+          <div>
+            <p className="font-mono text-xs tracking-[0.14em] text-muted-2 uppercase">
+              Academic highlights
+            </p>
+            <ul className="mt-4 space-y-4">
+              {featuredAchievements.map((item) => (
+                <li key={item.title} className="border-l-2 border-accent pl-4">
+                  <p className="text-sm font-medium tracking-tight text-foreground">
+                    {item.title}
+                  </p>
+                  {item.detail ? (
+                    <p className="mt-1 text-sm text-muted">{item.detail}</p>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/about#achievements"
+              className="mt-4 inline-flex text-sm text-muted underline-offset-4 transition-colors hover:text-accent hover:underline"
+            >
+              All academic achievements
             </Link>
-            .
-          </p>
+          </div>
+
+          <div>
+            <p className="font-mono text-xs tracking-[0.14em] text-muted-2 uppercase">
+              Primary stack
+            </p>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {primary?.items.map((item) => (
+                <li
+                  key={item}
+                  className="border border-border px-2.5 py-1.5 font-mono text-xs tracking-wide text-muted"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-muted">
+              Skills are grouped by relevance on the{" "}
+              <Link href="/about" className="underline-offset-4 hover:underline">
+                about page
+              </Link>
+              .
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>

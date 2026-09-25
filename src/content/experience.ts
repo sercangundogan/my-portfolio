@@ -50,14 +50,54 @@ export const education = {
   years: "2016–2021",
 };
 
-export const achievements: string[] = [
-  "TUBITAK 2242 Research Project Competition — 3rd Place",
-  "ESTU Project Fair — 3rd Place",
-  "TUBITAK 2209-A Research Project",
-  "TUBITAK 2209-B Industry Collaboration Research Project",
-  "ESTU Scientific Research Project",
-  "GLOBCER International Congress — Paper Presentation",
+export type Achievement = {
+  title: string;
+  detail?: string;
+  /** Highlight on homepage and About for recruiters */
+  featured?: boolean;
+  kind: "award" | "grant" | "presentation";
+};
+
+/**
+ * Academic achievements from CV.
+ * TUBITAK 2242 is the TEKNOFEST university research competition (3rd place).
+ */
+export const achievements: Achievement[] = [
+  {
+    title: "TUBITAK TEKNOFEST 2242 — 3rd Place",
+    detail:
+      "University Students Research Projects Competition (TUBITAK 2242 / TEKNOFEST)",
+    featured: true,
+    kind: "award",
+  },
+  {
+    title: "ESTU Project Fair — 3rd Place",
+    detail: "Eskisehir Technical University project fair award",
+    featured: true,
+    kind: "award",
+  },
+  {
+    title: "TUBITAK 2209-A Research Project",
+    detail: "University student research project support",
+    kind: "grant",
+  },
+  {
+    title: "TUBITAK 2209-B Industry Collaboration Research Project",
+    detail: "Industry-collaboration research project support",
+    kind: "grant",
+  },
+  {
+    title: "ESTU Scientific Research Project (BAP)",
+    detail: "University scientific research project support",
+    kind: "grant",
+  },
+  {
+    title: "GLOBCER International Congress — Paper Presentation",
+    kind: "presentation",
+  },
 ];
+
+export const featuredAchievements = achievements.filter((a) => a.featured);
 
 export const about = {
   paragraphs: [
