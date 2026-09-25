@@ -38,11 +38,15 @@ export type Project = {
   ownership: OwnershipType;
   ownershipLabel: string;
   timeline: string;
+  /** Compact result line, used for competitions shown above projects. */
+  result?: string;
   technologies: string[];
   contributions: string[];
   links: ProjectLink[];
   featured: boolean;
   featuredOrder?: number;
+  /** Competitions render above projects and use a competition case-study label. */
+  listing?: "project" | "competition";
   images: ProjectImage[];
   caseStudy: {
     overview: string;

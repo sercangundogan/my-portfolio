@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllProjectSlugs } from "@/content/projects";
+import { getAllWorkSlugs } from "@/content/projects";
 import { siteConfig } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const projectRoutes = getAllProjectSlugs().map((slug) => ({
+  const projectRoutes = getAllWorkSlugs().map((slug) => ({
     url: `${base}/work/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,

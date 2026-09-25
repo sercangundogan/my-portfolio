@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/content/site";
 import { ResumeButton } from "@/components/ResumeButton";
 import { ExternalLink } from "@/components/ExternalLink";
+import { competitions } from "@/content/competitions";
 import { getFeaturedProjects } from "@/content/projects";
 
 export function Hero() {
@@ -53,7 +54,7 @@ export function Hero() {
             {...fade(0.14)}
           >
             Currently working at Sociality.io and building independent products such as
-            Rewordly.
+            Rewordly and Brandisy.
           </motion.p>
 
           <motion.div className="mt-8 flex flex-wrap items-center gap-3" {...fade(0.18)}>
@@ -86,10 +87,35 @@ export function Hero() {
 
         <motion.aside
           className="border-border bg-surface/80 border p-5 backdrop-blur-sm"
-          aria-label="Selected projects index"
+          aria-label="Competitions and selected projects"
           {...fade(0.2)}
         >
           <p className="text-muted-2 font-mono text-[11px] tracking-[0.14em] uppercase">
+            Competitions
+          </p>
+          <ul className="divide-border mt-3 divide-y">
+            {competitions.map((competition) => (
+              <li key={competition.slug}>
+                <Link
+                  href={`/work/${competition.slug}`}
+                  className="group hover:text-accent flex items-baseline justify-between gap-4 py-4 transition-colors"
+                >
+                  <div>
+                    <span className="tracking-tight">{competition.name}</span>
+                    <p className="text-muted mt-1 text-xs">
+                      {competition.result
+                        ? `${competition.result} · ${competition.timeline}`
+                        : competition.timeline}
+                    </p>
+                  </div>
+                  <span className="text-muted-2 font-mono text-xs" aria-hidden="true">
+                    →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="text-muted-2 border-border mt-2 border-t pt-5 font-mono text-[11px] tracking-[0.14em] uppercase">
             Selected index
           </p>
           <ol className="divide-border mt-5 divide-y">

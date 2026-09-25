@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  getAdjacentProjects,
-  getAllProjectSlugs,
-  getProjectBySlug,
-} from "@/content/projects";
+import { getAdjacentWork, getAllWorkSlugs, getWorkBySlug } from "@/content/projects";
 import { CaseStudySection } from "@/components/CaseStudySection";
 import { ExternalLink } from "@/components/ExternalLink";
 import { OwnershipBadge } from "@/components/OwnershipBadge";
@@ -18,12 +14,12 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return getAllProjectSlugs().map((slug) => ({ slug }));
+  return getAllWorkSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = getWorkBySlug(slug);
   if (!project) return {};
   return createMetadata({
     title: project.name,
@@ -34,17 +30,17 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function CaseStudyPage({ params }: PageProps) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = getWorkBySlug(slug);
   if (!project) notFound();
 
-  const { prev, next } = getAdjacentProjects(slug);
+  const { prev, next } = getAdjacentWork(slug);
   const { caseStudy } = project;
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="max-w-3xl">
         <p className="font-mono text-xs tracking-[0.14em] text-muted-2 uppercase">
-          Case study
+          {project.listing === "competition" ? "Competition" : "Case study"}
         </p>
         <h1 className="mt-4 text-4xl tracking-tight text-balance sm:text-5xl">
           {project.name}

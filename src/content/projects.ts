@@ -1,3 +1,4 @@
+import { competitions } from "./competitions";
 import { siteConfig } from "./site";
 import type { Project } from "./types";
 
@@ -394,6 +395,86 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "brandisy",
+    name: "Brandisy",
+    shortDescription:
+      "An AI brand-kit generator that turns a business idea into a name, logo, color palette, typography, guidelines, and a downloadable asset pack.",
+    category: "Independent Product / SaaS",
+    role: "Creator and Full-stack Product Developer",
+    ownership: "end-to-end",
+    ownershipLabel: "End-to-end ownership",
+    timeline: "2025",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Supabase",
+      "OpenAI",
+      "Dodo Payments",
+      "Tailwind CSS",
+    ],
+    contributions: [
+      "Designed and built the product from idea input through a downloadable brand kit",
+      "Implemented the guided flow for name, industry, logo, color, and typography",
+      "Generated logos, palettes, type pairings, favicons, and brand-guideline PDFs",
+      "Added Supabase auth and a dashboard for saved brands",
+      "Shipped a free Basic tier and a one-time Pro upgrade with Dodo Payments",
+    ],
+    links: [
+      { label: "Website", href: "https://brandisy.io", external: true },
+      {
+        label: "GitHub",
+        href: "https://github.com/sercangundogan/brandisy",
+        external: true,
+      },
+    ],
+    featured: true,
+    featuredOrder: 5,
+    images: [
+      {
+        src: "/images/projects/brandisy/brand.png",
+        alt: "Brandisy brand mark and wordmark",
+        width: 3600,
+        height: 1890,
+        caption: "Brandisy",
+      },
+    ],
+    caseStudy: {
+      overview:
+        "Brandisy is an independent product that generates a professional brand kit from a short business idea: logo, colors, typography, usage guidelines, and packaged assets.",
+      context:
+        "I built it for founders and small businesses that need a usable identity quickly, without a design engagement, and that still want files they can drop into a site, an app, or a store.",
+      roleDetail:
+        "I own product direction, the generation flow, the web app, billing, and deployment as creator and full-stack developer.",
+      ownershipDetail:
+        "End-to-end ownership of the Next.js product: marketing pages, the multi-step brand flow, OpenAI generation, Supabase accounts and saved brands, and Pro checkout.",
+      problem:
+        "A new business usually needs a name, a logo, a palette, and type before it can publish anything. Those pieces are easy to leave inconsistent, and hiring a designer is slow for an early idea.",
+      contribution: [
+        "Built a guided flow from a business idea through industry, name, logo, color, and typography.",
+        "Generated downloadable assets: SVG and PNG logos, color palettes, font pairings, favicons, and a brand-guidelines PDF in a ZIP.",
+        "Added account login and a dashboard so generated brands can be saved and revisited.",
+        "Shipped a free Basic tier and a one-time Pro upgrade through Dodo Payments.",
+        "Published industry landing pages and a blog aimed at e-commerce, agencies, and restaurants.",
+      ],
+      technicalDecisions: [
+        "Next.js App Router for the marketing site, the brand flow, and generation APIs.",
+        "OpenAI on the server so model keys stay out of the browser.",
+        "Supabase for authentication and stored brand kits.",
+        "Client-side asset packaging for logos, palettes, and PDF guidelines.",
+      ],
+      challenges: [
+        "Turning a short idea into a coherent name, mark, palette, and type system.",
+        "Keeping generated files practical: SVG, PNG, favicon, and a guidelines PDF.",
+        "Separating a usable free tier from the paid download without blocking the flow.",
+      ],
+      outcome: [
+        "A shipping brand-kit product at brandisy.io, from prompt to downloadable identity.",
+        "Another end-to-end case of product, AI, auth, and payments in one codebase.",
+      ],
+    },
+  },
+  {
     slug: "jobswire",
     name: "Jobswire",
     shortDescription:
@@ -649,14 +730,23 @@ export function getAllProjectSlugs(): string[] {
   return projects.map((p) => p.slug);
 }
 
-export function getAdjacentProjects(slug: string): {
+export function getWorkBySlug(slug: string): Project | undefined {
+  return getProjectBySlug(slug) ?? competitions.find((item) => item.slug === slug);
+}
+
+export function getAllWorkSlugs(): string[] {
+  return [...getAllProjectSlugs(), ...competitions.map((item) => item.slug)];
+}
+
+export function getAdjacentWork(slug: string): {
   prev: Project | null;
   next: Project | null;
 } {
-  const index = projects.findIndex((p) => p.slug === slug);
+  const list = competitions.some((item) => item.slug === slug) ? competitions : projects;
+  const index = list.findIndex((item) => item.slug === slug);
   if (index === -1) return { prev: null, next: null };
   return {
-    prev: index > 0 ? projects[index - 1]! : null,
-    next: index < projects.length - 1 ? projects[index + 1]! : null,
+    prev: index > 0 ? list[index - 1]! : null,
+    next: index < list.length - 1 ? list[index + 1]! : null,
   };
 }
