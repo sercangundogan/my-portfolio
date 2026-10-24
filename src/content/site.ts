@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Hüseyin Sercan Gündoğan",
   shortName: "Sercan",
-  title: "Hüseyin Sercan Gündoğan — Frontend-focused Software Developer",
+  title: "Hüseyin Sercan Gündoğan — Senior Frontend Engineer",
   description:
-    "Frontend-focused Software Developer with 5+ years of experience building scalable web and mobile products with React, TypeScript, Next.js, and React Native.",
+    "Senior Frontend Engineer with 5+ years of experience building production SaaS, web, and mobile products with React, TypeScript, Next.js, and React Native. Currently at Panates.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sercangundogan.com",
   locale: "en_US",
   location: "Izmir, Turkey",

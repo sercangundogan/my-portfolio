@@ -13,7 +13,7 @@ export function ExperiencePreview() {
             <SectionHeading
               eyebrow="Experience"
               title="Where I've been building"
-              description="Frontend work on enterprise SaaS, with earlier internship experience on full-stack systems."
+              description="Frontend work on production SaaS, from Panates and Sociality.io through earlier internships."
             />
             <Link
               href="/experience"

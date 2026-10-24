@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Experience",
   description:
-    "Professional experience for Hüseyin Sercan Gündoğan — Sociality.io, İncir Ar-Ge, and Gravit.",
+    "Professional experience for Hüseyin Sercan Gündoğan — Panates, Sociality.io, Eleport, and İncir R&D.",
   path: "/experience",
 });
 

@@ -30,7 +30,7 @@ export function Hero() {
             className="text-muted-2 font-mono text-xs tracking-[0.16em] uppercase"
             {...fade(0)}
           >
-            Frontend-focused Software Developer
+            Senior Frontend Engineer
           </motion.p>
 
           <motion.h1
@@ -44,17 +44,17 @@ export function Hero() {
             className="text-muted mt-6 max-w-xl text-base leading-relaxed sm:text-lg"
             {...fade(0.1)}
           >
-            I&apos;m {siteConfig.shortName}, a Software Developer with 5+ years of
-            experience build enterprise SaaS products with React TypeScript, Next.js, and
-            React Native
+            I&apos;m {siteConfig.shortName}, a Senior Frontend Engineer with 5+ years of
+            experience building production SaaS, web, and mobile products with React,
+            TypeScript, Next.js, and React Native.
           </motion.p>
 
           <motion.p
             className="text-muted mt-4 max-w-xl text-base leading-relaxed"
             {...fade(0.14)}
           >
-            Currently working at Sociality.io and building independent products such as
-            Rewordly and Brandisy.
+            Currently at Panates. Previously at Sociality.io, and building independent
+            products such as Rewordly.
           </motion.p>
 
           <motion.div className="mt-8 flex flex-wrap items-center gap-3" {...fade(0.18)}>

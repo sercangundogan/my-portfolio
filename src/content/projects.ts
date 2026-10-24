@@ -53,7 +53,7 @@ export const projects: Project[] = [
           ]),
     ],
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 1,
     images: [
       {
         src: "/images/projects/rewordly/selection.png",
@@ -162,7 +162,7 @@ export const projects: Project[] = [
       },
     ],
     featured: true,
-    featuredOrder: 3,
+    featuredOrder: 2,
     images: [
       {
         src: "/images/projects/rewordly-web/web.png",
@@ -523,7 +523,7 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     ownership: "team",
     ownershipLabel: "Professional team contribution",
-    timeline: "Sep 2021 – Present",
+    timeline: "Sep 2021 – Oct 2026",
     technologies: [
       "React",
       "TypeScript",
@@ -540,19 +540,16 @@ export const projects: Project[] = [
       "Sentry",
     ],
     contributions: [
-      "Contributes to enterprise web and mobile products",
-      "Develops new features and improves existing product modules",
-      "Works on performance optimization and long-term frontend maintainability",
-      "Builds and improves reusable component architectures",
-      "Integrates REST APIs",
-      "Collaborates with backend, design, and product teams",
-      "Contributes to React Native applications for iOS and Android",
-      "Works on experiences involving social media management, engagement, analytics, and content workflows",
-      "Participates in production delivery, monitoring, and continuous improvement",
+      "Built and maintained web and mobile product surfaces for an enterprise SaaS used by 100+ customers in 20+ countries",
+      "Helped lead a gradual migration from Laravel/PHP to React and TypeScript while production stayed up",
+      "Led React Native development, maintenance, and App Store / Google Play releases",
+      "Rebuilt the company website with the team in Next.js, raising Google PageSpeed from about 30–40 to 85–95",
+      "Developed dashboards, reusable UI components, and REST API integrations",
+      "Collaborated with product, design, and backend teams",
     ],
     links: [{ label: "Website", href: "https://sociality.io", external: true }],
     featured: true,
-    featuredOrder: 1,
+    featuredOrder: 3,
     images: [
       {
         src: "/images/projects/sociality/web.png",
@@ -582,17 +579,17 @@ export const projects: Project[] = [
       context:
         "Enterprise customers need reliable web and mobile tools for publishing, engagement, analytics, and content operations across markets.",
       roleDetail:
-        "As Frontend Developer I ship features, improve modules, and maintain frontend quality on web and React Native surfaces.",
+        "I was a Frontend Developer on the product team from September 2021 to October 2026. I shipped web and React Native work, including the Laravel-to-React migration, mobile releases, and the public website rebuild.",
       ownershipDetail:
-        "Professional team contribution. Backend systems, overall product strategy, and customer operations are shared across the company. I contribute frontend architecture, features, integrations, and delivery.",
+        "Professional team contribution. Backend systems, overall product strategy, and customer operations were shared across the company. I owned frontend delivery on the surfaces I worked on, including React Native releases.",
       problem:
         "Large multi-module SaaS products accumulate UI complexity. The frontend must stay maintainable while shipping new workflows and integrating evolving APIs.",
       contribution: [
-        "Develop features and improve existing product modules on the enterprise web product.",
-        "Contribute to React Native applications for iOS and Android.",
-        "Build and refine reusable component architecture.",
-        "Integrate REST APIs and collaborate with backend, design, and product.",
-        "Work on performance, maintainability, monitoring, and production delivery.",
+        "Built features and improved product modules on the enterprise web product.",
+        "Helped lead the gradual migration from Laravel/PHP to React and TypeScript.",
+        "Led React Native app development, maintenance, and store releases for iOS and Android.",
+        "Rebuilt the marketing website with the team in Next.js.",
+        "Built dashboards, reusable components, and REST API integrations with product, design, and backend.",
       ],
       technicalDecisions: [
         "React and TypeScript as the core web stack, with Next.js where the product uses it.",
@@ -605,8 +602,8 @@ export const projects: Project[] = [
         "Coordinating web and mobile experiences across a product team.",
       ],
       outcome: [
-        "Ongoing contribution to a production enterprise SaaS used by customers in 20+ countries.",
-        "Practical experience owning frontend delivery inside a multi-disciplinary team.",
+        "Five years of frontend delivery on a production enterprise SaaS used by customers in 20+ countries.",
+        "A completed tenure: web migration, React Native ownership, and a public site rebuild with a measured PageSpeed improvement.",
       ],
       confidentialityNote:
         "Internal implementation details, private source code, customer data, and proprietary screens are omitted. Visuals use public marketing assets or placeholders only.",

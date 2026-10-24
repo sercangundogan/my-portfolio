@@ -12,9 +12,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ExperiencePreview />
       <Competitions />
       <SelectedWork />
-      <ExperiencePreview />
       <AboutPreview />
       <ContactPreview />
     </>

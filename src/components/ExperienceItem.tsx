@@ -20,6 +20,11 @@ export function ExperienceItem({ item, className }: ExperienceItemProps) {
         </p>
         <h3 className="mt-2 text-lg tracking-tight">{item.role}</h3>
         <p className="mt-1 text-muted">{item.company}</p>
+        {item.location ? (
+          <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-2 uppercase">
+            {item.location}
+          </p>
+        ) : null}
       </div>
       <div>
         <p className="leading-relaxed text-muted">{item.description}</p>

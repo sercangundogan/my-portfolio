@@ -22,6 +22,8 @@ export const skillGroups: SkillGroup[] = [
     title: "Backend and APIs",
     items: [
       "Node.js",
+      "Python",
+      "FastAPI",
       "Express.js",
       "Laravel",
       "Django",

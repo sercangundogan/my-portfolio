@@ -26,7 +26,7 @@ export default function AboutPage() {
       <SectionHeading
         eyebrow="About"
         title="About Sercan"
-        description="Frontend-focused Software Developer based in Izmir, Turkey."
+        description="Senior Frontend Engineer based in Izmir, Turkey. Currently at Panates."
       />
 
       <div className="mt-12 max-w-2xl space-y-5 text-base leading-relaxed text-muted">
@@ -87,14 +87,22 @@ export default function AboutPage() {
         {presentations.length > 0 ? (
           <div className="mt-10">
             <h3 className="font-mono text-xs tracking-[0.14em] text-muted-2 uppercase">
-              Presentations
+              Publications and presentations
             </h3>
             <ul className="mt-4 space-y-3">
-              {presentations.map((item) => (
-                <li key={item.title} className="border-l border-border pl-3 text-sm">
-                  {item.title}
-                </li>
-              ))}
+        {presentations.map((item) => (
+          <li
+            key={item.title}
+            className={
+              item.featured
+                ? "border border-accent/30 bg-accent-soft/40 p-5 text-sm"
+                : "border-l border-border pl-3 text-sm"
+            }
+          >
+            <p className="font-medium tracking-tight text-foreground">{item.title}</p>
+            {item.detail ? <p className="mt-1 text-muted">{item.detail}</p> : null}
+          </li>
+        ))}
             </ul>
           </div>
         ) : null}
@@ -104,7 +112,10 @@ export default function AboutPage() {
         <h2 className="text-2xl tracking-tight">Education</h2>
         <p className="mt-4 text-lg tracking-tight">{education.school}</p>
         <p className="mt-1 text-muted">{education.degree}</p>
-        <p className="mt-2 font-mono text-xs text-muted-2">{education.years}</p>
+        <p className="mt-2 font-mono text-xs text-muted-2">
+          {education.years}
+          {education.gpa ? ` · GPA ${education.gpa}` : ""}
+        </p>
       </section>
 
       <section className="mt-16 border-t border-border pt-12">
