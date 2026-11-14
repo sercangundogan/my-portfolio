@@ -37,11 +37,6 @@ export const projects: Project[] = [
     ],
     links: [
       { label: "Website", href: "https://rewordly.store", external: true },
-      {
-        label: "GitHub",
-        href: "https://github.com/sercangundogan/rewordly",
-        external: true,
-      },
       ...(chromeStoreUrl
         ? [{ label: "Chrome Web Store", href: chromeStoreUrl, external: true }]
         : [
@@ -155,11 +150,6 @@ export const projects: Project[] = [
     ],
     links: [
       { label: "Website", href: "https://rewordly.store", external: true },
-      {
-        label: "GitHub",
-        href: "https://github.com/sercangundogan/rewordly-web",
-        external: true,
-      },
     ],
     featured: true,
     featuredOrder: 2,
