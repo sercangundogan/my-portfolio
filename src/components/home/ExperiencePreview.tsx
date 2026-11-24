@@ -6,18 +6,18 @@ import { Reveal } from "@/components/Reveal";
 
 export function ExperiencePreview() {
   return (
-    <section id="experience" className="border-b border-border">
+    <section id="experience" className="border-border border-b">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
               eyebrow="Experience"
               title="Where I've been building"
-              description="Frontend work on production SaaS, from Panates and Sociality.io through earlier internships."
+              description="Production SaaS work, from Panates and Sociality.io through earlier internships."
             />
             <Link
               href="/experience"
-              className="text-sm underline-offset-4 transition-colors hover:text-accent hover:underline"
+              className="hover:text-accent text-sm underline-offset-4 transition-colors hover:underline"
             >
               Full timeline
             </Link>

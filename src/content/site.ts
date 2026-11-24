@@ -1,16 +1,16 @@
 export const siteConfig = {
   name: "Hüseyin Sercan Gündoğan",
   shortName: "Sercan",
-  title: "Hüseyin Sercan Gündoğan — Senior Frontend Engineer",
+  title: "Hüseyin Sercan Gündoğan — Software Engineer",
   description:
-    "Senior Frontend Engineer with 5+ years of experience building production SaaS, web, and mobile products with React, TypeScript, Next.js, and React Native. Currently at Panates.",
+    "Software engineer who builds products end to end: React, TypeScript, Next.js and React Native on the front, Node.js, Python and PostgreSQL behind them. Five years on a SaaS serving 100+ enterprise customers, and creator of Rewordly, Seoneer and Brandisy.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sercangundogan.com",
   locale: "en_US",
   location: "Izmir, Turkey",
   email: "sercangundogan35@gmail.com",
   availability: {
     label: "Open to opportunities",
-    detail: "Frontend, software, and product engineering roles",
+    detail: "Software, product and full-stack engineering roles — remote or Izmir",
   },
   links: {
     github: "https://github.com/sercangundogan",

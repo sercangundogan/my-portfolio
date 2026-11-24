@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <p className="text-lg tracking-tight">{siteConfig.name}</p>
             <p className="mt-2 max-w-md text-sm text-muted">
-              Senior Frontend Engineer building web and mobile products.
+              Software engineer building AI, web and mobile products end to end.
             </p>
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">

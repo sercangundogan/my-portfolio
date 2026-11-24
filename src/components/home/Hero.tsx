@@ -1,152 +1,87 @@
-"use client";
-
-import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 import { siteConfig } from "@/content/site";
-import { ResumeButton } from "@/components/ResumeButton";
-import { ExternalLink } from "@/components/ExternalLink";
-import { competitions } from "@/content/competitions";
-import { getFeaturedProjects } from "@/content/projects";
+import { showcase } from "@/content/showcase";
+
+const rotatingWords = ["AI products", "extensions", "SaaS", "mobile apps"];
+const cycleSeconds = 10;
 
 export function Hero() {
-  const reduce = useReducedMotion();
-  const featured = getFeaturedProjects();
-
-  const fade = (delay = 0) =>
-    reduce
-      ? undefined
-      : {
-          initial: { opacity: 0, y: 14 },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] as const },
-        };
-
   return (
-    <section className="border-border relative overflow-hidden border-b">
+    <section className="motion-scene border-border relative overflow-hidden border-b">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--accent-soft),transparent_55%)]" />
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-16 lg:px-8 lg:py-28">
-        <div>
-          <motion.p
-            className="text-muted-2 font-mono text-xs tracking-[0.16em] uppercase"
-            {...fade(0)}
-          >
-            Senior Frontend Engineer
-          </motion.p>
+      <div className="relative mx-auto flex min-h-[calc(100svh-3.5rem)] max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <p className="border-border bg-surface/70 text-muted inline-flex items-center gap-2.5 self-start rounded-full border px-3.5 py-1.5 text-sm">
+          <span
+            aria-hidden="true"
+            className="bg-success size-2 rounded-full"
+            style={{ animation: "pulse-soft 2s infinite" }}
+          />
+          Software engineer · {siteConfig.location.split(",")[0]} · Open to remote
+        </p>
 
-          <motion.h1
-            className="mt-5 max-w-3xl text-4xl leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-[3.5rem]"
-            {...fade(0.05)}
-          >
-            I build scalable web and mobile products.
-          </motion.h1>
-
-          <motion.p
-            className="text-muted mt-6 max-w-xl text-base leading-relaxed sm:text-lg"
-            {...fade(0.1)}
-          >
-            I&apos;m {siteConfig.shortName}, a Senior Frontend Engineer with 5+ years of
-            experience building production SaaS, web, and mobile products with React,
-            TypeScript, Next.js, and React Native.
-          </motion.p>
-
-          <motion.p
-            className="text-muted mt-4 max-w-xl text-base leading-relaxed"
-            {...fade(0.14)}
-          >
-            Currently at Panates. Previously at Sociality.io, and building independent
-            products such as Rewordly.
-          </motion.p>
-
-          <motion.div className="mt-8 flex flex-wrap items-center gap-3" {...fade(0.18)}>
-            <Link
-              href="/work"
-              className="border-foreground bg-foreground text-background hover:bg-foreground/90 inline-flex items-center justify-center border px-4 py-2.5 text-sm font-medium transition-colors"
-            >
-              View selected work
-            </Link>
-            <ResumeButton variant="secondary" />
-          </motion.div>
-
-          <motion.div
-            className="text-muted mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm"
-            {...fade(0.22)}
-          >
-            <ExternalLink href={siteConfig.links.github} showIcon>
-              GitHub
-            </ExternalLink>
-            <ExternalLink href={siteConfig.links.linkedin} showIcon>
-              LinkedIn
-            </ExternalLink>
-            <ExternalLink href={siteConfig.links.email}>Email</ExternalLink>
-            <span className="text-muted inline-flex items-center gap-2">
-              <span className="bg-success size-1.5 rounded-full" aria-hidden="true" />
-              <span className="text-sm">{siteConfig.availability.label}</span>
+        <h1 className="mt-8 text-[clamp(2.75rem,7.2vw,7rem)] leading-[1] font-semibold tracking-[-0.045em]">
+          <span className="sr-only">
+            I turn ideas into AI products, extensions, SaaS and mobile apps — and ship
+            them.
+          </span>
+          <span aria-hidden="true">
+            I turn ideas into
+            <br />
+            <span className="text-accent inline-grid">
+              {rotatingWords.map((word, i) => (
+                <span
+                  key={word}
+                  className={`whitespace-nowrap [grid-area:1/1] ${i > 0 ? "rm-hide" : ""}`}
+                  style={{
+                    animation: `hw ${cycleSeconds}s ${(i * cycleSeconds) / rotatingWords.length}s infinite both`,
+                  }}
+                >
+                  {word}
+                </span>
+              ))}
             </span>
-          </motion.div>
-        </div>
+            <br />
+            and ship them.
+          </span>
+        </h1>
 
-        <motion.aside
-          className="border-border bg-surface/80 border p-5 backdrop-blur-sm"
-          aria-label="Competitions and selected projects"
-          {...fade(0.2)}
+        <p className="text-muted mt-8 max-w-2xl text-lg leading-relaxed sm:text-xl">
+          I&apos;m {siteConfig.shortName}. I build whole products — the AI, the interface,
+          the payments. Five years on a SaaS used by 100+ enterprise customers in 20+
+          countries, and products of my own with real, paying users.
+        </p>
+
+        <ul aria-label="Projects on this page" className="mt-10 flex flex-wrap gap-2.5">
+          {showcase.map((item) => (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                className="border-border bg-surface/60 hover:border-foreground inline-flex min-h-11 items-center gap-2 rounded-full border px-4 text-[15px] transition-colors"
+              >
+                <span
+                  aria-hidden="true"
+                  className="size-2 rounded-full"
+                  style={{ background: item.color }}
+                />
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="#work"
+          className="text-muted hover:text-foreground mt-12 inline-flex items-center gap-3 self-start text-base transition-colors"
         >
-          <p className="text-muted-2 font-mono text-[11px] tracking-[0.14em] uppercase">
-            Competitions
-          </p>
-          <ul className="divide-border mt-3 divide-y">
-            {competitions.map((competition) => (
-              <li key={competition.slug}>
-                <Link
-                  href={`/work/${competition.slug}`}
-                  className="group hover:text-accent flex items-baseline justify-between gap-4 py-4 transition-colors"
-                >
-                  <div>
-                    <span className="tracking-tight">{competition.name}</span>
-                    <p className="text-muted mt-1 text-xs">
-                      {competition.result
-                        ? `${competition.result} · ${competition.timeline}`
-                        : competition.timeline}
-                    </p>
-                  </div>
-                  <span className="text-muted-2 font-mono text-xs" aria-hidden="true">
-                    →
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <p className="text-muted-2 border-border mt-2 border-t pt-5 font-mono text-[11px] tracking-[0.14em] uppercase">
-            Selected index
-          </p>
-          <ol className="divide-border mt-5 divide-y">
-            {featured.map((project, index) => (
-              <li key={project.slug}>
-                <Link
-                  href={`/work/${project.slug}`}
-                  className="group hover:text-accent flex items-baseline justify-between gap-4 py-4 transition-colors"
-                >
-                  <div>
-                    <span className="text-muted-2 mr-3 font-mono text-xs">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="tracking-tight">{project.name}</span>
-                    <p className="text-muted group-hover:text-muted mt-1 pl-8 text-xs">
-                      {project.ownershipLabel}
-                    </p>
-                  </div>
-                  <span className="text-muted-2 font-mono text-xs" aria-hidden="true">
-                    →
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-          <div className="border-border mt-2 border-t pt-4">
-            <p className="text-muted-2 font-mono text-[11px]">
-              Stack focus · React · TypeScript · Next.js · React Native
-            </p>
-          </div>
-        </motion.aside>
+          <span
+            aria-hidden="true"
+            className="border-border-strong grid size-10 place-items-center rounded-full border"
+            style={{ animation: "bob 1.8s infinite" }}
+          >
+            <ArrowDown className="size-[18px]" />
+          </span>
+          Don&apos;t read about them — watch them work
+        </a>
       </div>
     </section>
   );

@@ -53,7 +53,7 @@ export function personJsonLd() {
     name: siteConfig.name,
     url: siteConfig.url,
     email: siteConfig.email,
-    jobTitle: "Software Developer",
+    jobTitle: "Software Engineer",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Izmir",

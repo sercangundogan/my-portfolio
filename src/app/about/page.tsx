@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "About",
   description:
-    "About Hüseyin Sercan Gündoğan — frontend-focused Software Developer. TUBITAK TEKNOFEST 2242 3rd Place and academic research project supports.",
+    "About Hüseyin Sercan Gündoğan — software engineer who builds products end to end. TUBITAK TEKNOFEST 2242 3rd Place and academic research project supports.",
   path: "/about",
 });
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
       <SectionHeading
         eyebrow="About"
         title="About Sercan"
-        description="Senior Frontend Engineer based in Izmir, Turkey. Currently at Panates."
+        description="Software engineer based in Izmir, Turkey. Currently at Panates."
       />
 
       <div className="mt-12 max-w-2xl space-y-5 text-base leading-relaxed text-muted">
