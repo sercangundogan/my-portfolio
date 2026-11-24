@@ -9,6 +9,35 @@ export function Showcase() {
   return (
     <section id="work" className="border-border border-b">
       <div className="mx-auto flex max-w-6xl flex-col gap-24 px-4 py-20 sm:px-6 lg:gap-32 lg:px-8 lg:py-28">
+        <Reveal>
+          <p className="text-muted font-mono text-xs tracking-[0.14em] uppercase">
+            Products
+          </p>
+          <h2 className="mt-3 max-w-3xl text-[clamp(2.25rem,4.6vw,3.75rem)] leading-[1.02] font-semibold tracking-[-0.035em]">
+            On my own time, I build whole products.
+          </h2>
+          <p className="text-muted mt-5 max-w-2xl text-lg leading-relaxed">
+            Idea, AI, interface, auth and payments — designed, built and launched end to
+            end. Don&apos;t read about them; watch them work.
+          </p>
+          <ul aria-label="Products on this page" className="mt-8 flex flex-wrap gap-2.5">
+            {showcase.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  className="border-border bg-surface/60 hover:border-foreground inline-flex min-h-11 items-center gap-2 rounded-full border px-4 text-[15px] transition-colors"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="size-2 rounded-full"
+                    style={{ background: item.color }}
+                  />
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
         {showcase.map((item, index) => {
           const sceneFirst = index % 2 === 0;
           return (

@@ -116,7 +116,7 @@ export const featuredAchievements = achievements.filter((a) => a.featured);
 
 export const about = {
   paragraphs: [
-    "Sercan is a frontend-focused software engineer with 5+ years of experience building production SaaS, web, and mobile products.",
+    "Sercan is a software engineer with 5+ years of experience building production SaaS, web, and mobile products — and AI products of his own, end to end.",
     "He is a Senior Frontend Developer at Panates. Previously he spent five years at Sociality.io, working on React, TypeScript, Next.js, and React Native for an enterprise SaaS used by customers in 20+ countries.",
     "He enjoys working closely with product, design, and backend teams and prefers environments where engineers contribute to technical and product decisions — not only predefined tickets.",
     "He actively uses AI-assisted development tools such as Cursor, Claude Code, ChatGPT, and GitHub Copilot as part of his daily workflow.",
