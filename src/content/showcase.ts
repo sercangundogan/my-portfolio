@@ -32,7 +32,7 @@ export const showcase: ShowcaseItem[] = [
     color: "#7cc4e8",
     labelVar: "var(--p-rewordly)",
     caseLabel: "See how I built it",
-    live: { label: "Try it live", href: "https://rewordly.store" },
+    live: { label: "Try it live", href: "https://rewordly.io" },
   },
   {
     id: "seoneer",

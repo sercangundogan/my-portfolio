@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "Managed product UX, architecture, releases, and iteration",
     ],
     links: [
-      { label: "Website", href: "https://rewordly.store", external: true },
+      { label: "Website", href: "https://rewordly.io", external: true },
       ...(chromeStoreUrl
         ? [{ label: "Chrome Web Store", href: chromeStoreUrl, external: true }]
         : [
@@ -100,7 +100,7 @@ export const projects: Project[] = [
       technicalDecisions: [
         "TypeScript + Webpack bundling for content, background, and popup entry points.",
         "Isolated injected UI styling to reduce host-page CSS collisions.",
-        "Backend API on rewordly.store instead of embedding API keys in the extension.",
+        "Backend API on rewordly.io instead of embedding API keys in the extension.",
         "Chrome storage for preferences and install/update state only.",
       ],
       challenges: [
@@ -149,7 +149,7 @@ export const projects: Project[] = [
       "Deployed and maintained the application on Vercel",
     ],
     links: [
-      { label: "Website", href: "https://rewordly.store", external: true },
+      { label: "Website", href: "https://rewordly.io", external: true },
     ],
     featured: true,
     featuredOrder: 2,
@@ -202,7 +202,7 @@ export const projects: Project[] = [
         "Balancing marketing, SEO content, and product dashboard in one codebase.",
       ],
       outcome: [
-        "A production SaaS surface at rewordly.store supporting the extension’s auth, AI, and monetization paths.",
+        "A production SaaS surface at rewordly.io supporting the extension’s auth, AI, and monetization paths.",
         "Demonstrates full-stack product ownership beyond UI-only work.",
       ],
     },
